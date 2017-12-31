@@ -1,17 +1,45 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title><p>Cadastro de Curso</p></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Codigo Curso</ion-label>
+      <ion-input type="number" [(ngModel)]="curso.codigo"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Nome Curso</ion-label>
+      <ion-input type="text"[(ngModel)]="curso.nome" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Valor</ion-label>
+      <ion-input type="password"[(ngModel)]="curso.valor"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Descricao</ion-label>
+      <ion-input type="password"[(ngModel)]="curso.descricao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Maximo de Parcelas</ion-label>
+      <ion-input type="password"[(ngModel)]="curso.maxparcela"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Quantidade de dia de Vencimento</ion-label>
+      <ion-input type="password"[(ngModel)]="curso.qtdiavencimento"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+    <button ion-button full (click)="salvar()">Salvar</button>
+  </ion-item>
+  
+  </ion-list>
 </ion-content>
