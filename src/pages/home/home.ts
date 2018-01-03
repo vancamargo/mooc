@@ -2,7 +2,7 @@ import { Component, Injectable } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { EditarPage } from '../editar/editar';
+import { ListarPage } from '../listar/listar';
 
 
 export class Curso {
@@ -31,10 +31,11 @@ export class HomePage {
   }
 
   salvar() {
+    console.log('aqui');
     this.http.post(this.url, this.curso).map(res => res.json()).subscribe(data => {
       //console.log(`cccc`, data);
       if (data.sucesso) {
-       this.navCtrl.setRoot(EditarPage)
+       this.navCtrl.setRoot(ListarPage);
       }
       else {
         console.log(data.message)
